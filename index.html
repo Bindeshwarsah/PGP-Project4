@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="upperContainer">
+            <p>calc</p>
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="lowerContainer">
+            <table border="0" align="center" cellspacing="16">
+                <tr>
+                    <td><input type="button" value="7"></td>
+                    <td><input type="button" value="8"></td>
+                    <td><input type="button" value="9"></td>
+                    <td><input type="button" value="DEL" id="del"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4"></td>
+                    <td><input type="button" value="5"></td>
+                    <td><input type="button" value="6"></td>
+                    <td><input type="button" value="+"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1"></td>
+                    <td><input type="button" value="2"></td>
+                    <td><input type="button" value="3"></td>
+                    <td><input type="button" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="."></td>
+                    <td><input type="button" value="0"></td>
+                    <td><input type="button" value="/"></td>
+                    <td><input type="button" value="x"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="RESET" id="reset"></td>
+                    <td colspan="2"><input type="button" value="=" id="equalto"></td>
+                </tr>
+        
+            </table>
+        </div>
+
+
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
