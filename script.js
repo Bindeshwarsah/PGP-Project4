@@ -53,6 +53,9 @@
                 else if((val==='.' && currentVal.match(/[.]$/))||(val==='-'&& currentVal.match(/[-]$/))){
                     return;
                 }
+                else if ((val==='-' && currentVal.match(/[+]$/))||(val==='/' && currentVal.match(/[-s]$/))){
+                    document.getElementById("result").value = currentVal.slice(0, -1) + val;
+                }
 
                 else if ((val === '-' || val === '.') && currentVal.endsWith('-')) {
                     document.getElementById("result").value += val;
