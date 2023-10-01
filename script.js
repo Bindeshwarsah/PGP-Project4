@@ -45,10 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If the input ends with '=' and the pressed value is not a number or dot, do nothing
                 return;
             }  
-            else if (val.match(/[x/+-.]/) && currentVal.match(/[x/+-.]$/)) {
+            else if (val.match(/[-.]/) && currentVal.match(/[-.]$/)) {
                 // If an operator is pressed and the current input ends with an operator, replace the existing operator with the new one
                 document.getElementById("result").value = currentVal.slice(0, -1) + val;
             } 
+            else if ((val === 'x' || val === '/' || val === '+' || val === '%') && currentVal.match(/[x/+-.]$/)) {
+                // Prevent entering multiple operators consecutively
+                return;
+            }
     
              else {
                 document.getElementById("result").value += val;
