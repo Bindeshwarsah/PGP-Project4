@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
      // Set the default input value to '0'
      document.getElementById('result').value = '0';
-     
+
     let displayValue = 0;
     const buttons = document.querySelectorAll("input[type='button']");
     
@@ -44,7 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (currentVal.endsWith('=') && !val.match(/[0-9.]/)) {
                 // If the input ends with '=' and the pressed value is not a number or dot, do nothing
                 return;
-            }   
+            }  
+            else if (val.match(/[x/+-.]/) && currentVal.match(/[x/+-.]$/)) {
+                // If an operator is pressed and the current input ends with an operator, replace the existing operator with the new one
+                document.getElementById("result").value = currentVal.slice(0, -1) + val;
+            } 
     
              else {
                 document.getElementById("result").value += val;
