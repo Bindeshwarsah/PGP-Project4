@@ -106,12 +106,14 @@ input[type="text"]{
     }
     .lowerContainer table{
         width: 18rem;
+        height: 20rem;
         padding: 1.5rem 0.4rem;
+        margin-bottom: 1rem;
     }
 
     input[type="button"]{
-        width: 3.6rem;
-        height: 3.7rem;
+        width: 4.2rem;
+        height: 3rem;
         font-size:1.5rem;
 }
 #del,#reset,#equalto{
@@ -119,7 +121,7 @@ input[type="text"]{
 }
 table{
     border-collapse: separate; 
-    border-spacing: 1rem 0rem; 
+    border-spacing: .5rem 0rem; 
 }
 
 }
